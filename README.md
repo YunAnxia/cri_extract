@@ -1,7 +1,8 @@
 # cri_extract
 
-从 CRIWARE `ACB/AWB` 容器中提取音频:还原 **Cue 原始文件名与元数据**,并通过
-[vgmstream](https://github.com/vgmstream/vgmstream) 解码成 wav。
+从 CRIWARE `ACB/AWB` 容器中提取音频:还原 **Cue 原始文件名&提取元数据**,并通过
+[vgmstream](https://github.com/vgmstream/vgmstream) 解码成 wav。   
+！！！因为相关资源缺乏创作者信息（搓这个只是为了提取一首没有公开的剧情界面配乐&剧情曲），故没有实现元数据写入功能，若有需求请自行借助本项目导出的 manifest.json 实现！！！
 
 > 为什么要用 vgmstream 解码:在提取某游戏的音频时发现其是较新 CRI 编码器产出的 HCA（header 带 0x80 掩码标记、部分含 ciph 标记但音频帧本身未加密），尝试使用 FFmpeg （9.0.1,
 > 含 CRI HCA 解码器）发现没法正常解码,而 vgmstream 无需任何密钥（因为数据帧本来就没有真正加密）即可正确解码，懒得排查问题，故将解码工作丢给vgmstream
