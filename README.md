@@ -1,6 +1,6 @@
 # cri_extract
 
-从 CRIWARE `ACB/AWB` 容器中提取音频:还原 **Cue 原始文件名&提取元数据**,并通过
+从并未真正加密的 CRIWARE `ACB/AWB` 容器中提取音频:还原 **Cue 原始文件名&提取元数据**,并通过
 [vgmstream](https://github.com/vgmstream/vgmstream) 解码成 wav。   
 ！！！因为相关资源缺乏创作者信息（搓这个只是为了提取一首没有公开的剧情界面配乐&剧情曲），故没有实现元数据写入功能，若有需求请自行借助本项目导出的 manifest.json 实现！！！
 
